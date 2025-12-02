@@ -1,13 +1,11 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- saved from url=(0040)http://demo.jq22.com/index-141211230754/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
 
 <script language="JavaScript">
 //定义参数 start
 var dCol="#000000",fCol="#000000",sCol="blue",mCol="green",hCol="red";
-var ClockHeight=100,ClockWidth=100,ClockFromMouseY=0,ClockFromMouseX=0;
-var d=new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六");
+var ClockHeight=50,ClockWidth=50,ClockFromMouseY=80,ClockFromMouseX=70;
+var d=new Array("星期天  圣诞快乐","星期一  圣诞快乐","星期二  圣诞快乐","星期三  圣诞快乐","星期四  圣诞快乐","星期五  圣诞快乐","星期六  圣诞快乐");
 var m=new Array("一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月");
 var date=new Date();
 var day=date.getDate();
@@ -36,7 +34,7 @@ var HandHeight=ClockHeight/4.5
 var HandWidth=ClockWidth/4.5
 var HandY=-7;
 var HandX=-2.5;
-var step=0.02;
+var step=0.01;
 var currStep=0;
 var y=new Array(),x=new Array(),Y=new Array(),X=new Array();
 for (i=0; i < n; i++){
