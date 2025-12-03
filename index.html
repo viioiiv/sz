@@ -92,12 +92,8 @@ for (i=0; i < D.length; i++){
 
 // 背景图片轮播相关变量
 var bgImages = [
-  "tp/img0.jpg", "tp/img0_1920x1200.jpg", "tp/img100.jpg", "tp/img101.jpg", "tp/img102.jpg",
-  "tp/img103.jpg", "tp/img104.jpg", "tp/img105.jpg", "tp/img14.jpg", "tp/img19.jpg",
-  "tp/img19_1920x1200.jpg", "tp/img20.jpg", "tp/img21.jpg", "tp/img22.jpg", "tp/img23.jpg",
-  "tp/img24.jpg", "tp/img25.jpg", "tp/img26.jpg", "tp/img27.jpg", "tp/img28.jpg",
-  "tp/img29.jpg", "tp/img30.jpg", "tp/img31.jpg", "tp/img32.jpg", "tp/img33.jpg",
-  "tp/img34.jpg", "tp/img35.jpg"
+  "tp/a (1).jpg", "tp/a (2).jpg", "tp/a (3).jpg", "tp/a (4).jpg", "tp/a (5).jpg",
+  "tp/a (6).jpg", "tp/a (7).jpg", "tp/a (8).jpg", "tp/a (9).jpg"
 ];
 var currentBgIndex = 0;
 
@@ -146,6 +142,13 @@ function initBackgroundSlideshow() {
   for (var i = 0; i < bgImages.length; i++) {
     var img = document.createElement('img');
     img.src = bgImages[i];
+    // 添加错误处理
+    img.onerror = function() {
+      console.log('图片加载失败: ' + this.src);
+    };
+    img.onload = function() {
+      console.log('图片加载成功: ' + this.src);
+    };
     if (i === 0) img.className = 'active'; // 第一张图片默认显示
     bgContainer.appendChild(img);
   }
